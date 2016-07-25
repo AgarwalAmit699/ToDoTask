@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--assign our angular module-->
+<html lang="en" ng-app="scotchTodo">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"> <!--optimize mobile viewport-->
+
+	<title>ToDo Task App</title>
+
+	<!--scrolls load boodstrap-->
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<style>
+	html { overflow-y:scroll;}
+	body { padding-top: 50px;}
+	#todo-list {margin-bottom: 30px;}
+	</style>
+
+	<!--Angular files-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!--load angular jquery-->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!--load angular js-->
+	<script src="core.js"></script>
+
+</head>
+
+<!--set the controller and get all the todos-->
+<body ng-controller="mainController">
+	<div class="container">
+
+		<!--header-->
+		<div class="jumbotron text-center">
+			<h1>No of tasks to do: <span class="label label-info">{{ todos.length }}</span></h1>
+		</div>
+
+		<!--todo list-->
+		<div id="todo-list" class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				
+				<!--loop over todo in $scope.todo-->
+				<div class="checkbox" ng-repeat="todo in todos">
+					<label>
+						<input type="checkbox" ng-click="deleteTodo(todo._id)">{{todo.text}}
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!--form to create todo-->
+		<div id="todo-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form>
+					<div class="form-group">
+						
+						<!--bind this value to formData.text in angular-->
+						<input type="text" class="form-control input-lg text-center" placeholder="I want to do......" ng-model="formData.text">
+					</div>
+
+					<!--createTodo() will create new todos-->
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">ADD</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

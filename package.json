@@ -1,0 +1,14 @@
+{
+ "name":"todolist",
+ "version":"0.1.0",
+ "dependencies":{
+	"express":"^4.13.4",
+	"method-override":"^2.1.3",
+	"mongoose":"^4.4.12",
+	"morgan":"^1.1.1",
+	"body-parser":"^1.4.3"
+ },
+ "author":"amit agarwal",
+ "description":"My first to do list",
+ "main":"server.js"
+}
