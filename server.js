@@ -91,5 +91,5 @@ app.get('*',function(req,res){
 });
 
 //listen to port 8080
-app.listen(8080);
-console.log("Application listening on Port 8080");
+//app.listen(8080);
+//console.log("Application listening on Port 8080");
