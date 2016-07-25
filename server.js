@@ -90,6 +90,6 @@ app.get('*',function(req,res){
 	res.sendfile('./public/index.html');    //load the single view file (angular will handle the page changes on the front)
 });
 
-//listen to port 8080
-//app.listen(8080);
-//console.log("Application listening on Port 8080");
+//listen to port 5000
+	app.listen(process.env.PORT || 5000)
+console.log("Application listening on Port 5000");
