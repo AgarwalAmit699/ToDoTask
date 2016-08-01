@@ -18,8 +18,10 @@
 
 	<!--Angular files-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!--load angular jquery-->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!--load angular js-->
-	<script src="core.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script><!--load angular js-->
+	<script src="js/controllers/main.js"></script>  <!--load up all our controller-->
+	<script src="js/services/todos.js"></script>    <!--load our todo service-->
+	<script src="js/core.js"></script>       <!--load our main application-->
 
 </head>
 
@@ -29,7 +31,11 @@
 
 		<!--header-->
 		<div class="jumbotron text-center">
-			<h1>No of tasks to do: <span class="label label-info">{{ todos.length }}</span></h1>
+			<h1>Action Time Tracker..</h1>
+		</div>
+          
+          <div>
+			<h1><center>No of tasks to do: <span class="label label-info">{{ todos.length }}</span></center></h1>
 		</div>
 
 		<!--todo list-->
@@ -63,4 +69,4 @@
 	</div>
 	
 </body>
-</html>
+</html></h1>
